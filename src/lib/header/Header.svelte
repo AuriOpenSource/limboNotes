@@ -9,9 +9,6 @@
 		<div class="border-b-2 border-primary w-full hover:bg-base-300 ml-2">
 			<a href="" class="mx-2">notes</a>
 		</div>
-		<div class="border-b-2 border-none w-full hover:bg-base-300 ml-2">
-			<a href="" class="mx-2">categorys</a>
-		</div>
 	</div>
 	<Search/>
 </header>
