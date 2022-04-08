@@ -9,12 +9,12 @@
 	<Header />
 {/if}
 
-<main class="relative top-16 overflow-auto">
+<main class="relative top-14 overflow-auto">
 	<slot />
 </main>
 
 <style>
 	main {
-		height: 93vh;
+		height: 90vh;
 	}
 </style>
