@@ -5,7 +5,7 @@
 
 <Header />
 
-<main>
+<main class="relative top-14">
 	<slot />
 </main>
 
