@@ -10,7 +10,7 @@
                 id={todo.indexOf(note)}
             >
                 <span class="text-lg">{note.name}</span>
-                <p class="text-2xs">{note.date}</p>
+                <p class="text-2xs">Generated in {note.date}</p>
                 <p class="text-sm">{note.content.slice(0, 25) + "..."}</p>
             </li>
         {:else if note.type == "array"}
@@ -19,7 +19,7 @@
                 id={todo.indexOf(note)}
             >
                 <span class="text-lg">{note.name}</span>
-                <p class="text-2xs">{note.date}</p>
+                <p class="text-2xs">Generated in {note.date}</p>
                 <ol class="ml-3 text-primary" style="list-style-type: disc;">
                     {#each note.content.slice(0, 2) as item}
                         <li class="text-sm">
