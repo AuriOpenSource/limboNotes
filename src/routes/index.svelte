@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Card from "../lib/card/card.svelte";
 </script>
 
 <svelte:head>
@@ -8,5 +7,5 @@
 
 
 <style>
-
+	
 </style>

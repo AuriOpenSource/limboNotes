@@ -13,3 +13,10 @@ declare namespace App {
 
 	// interface Stuff {}
 }
+
+export interface Todo {
+	name: string;
+	content: string | string[];
+	date: string;
+	type: string;
+}

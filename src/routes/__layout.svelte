@@ -5,9 +5,12 @@
 
 <Header />
 
-<main class="relative top-14">
+<main class="relative top-16 overflow-auto">
 	<slot />
 </main>
 
 <style>
+	main {
+		height: 83vh;
+	}
 </style>
