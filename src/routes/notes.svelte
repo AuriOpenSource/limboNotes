@@ -28,6 +28,24 @@
             date: "15/04",
             type: "array",
         },
+        {
+            name: "Deveres",
+            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
+            date: "15/04",
+            type: "array",
+        },
+        {
+            name: "Deveres",
+            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
+            date: "15/04",
+            type: "array",
+        },
+        {
+            name: "Deveres",
+            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
+            date: "15/04",
+            type: "array",
+        },
     ];
 
     console.table(todo);

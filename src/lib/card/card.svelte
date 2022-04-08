@@ -2,7 +2,7 @@
     export let todo: Record<string, string | string[]>[];
 </script>
 
-<ul class="grid md:grid-cols-2 lg:grid-cols-4">
+<ul class="grid p-2 md:grid-cols-2 lg:grid-cols-4">
     {#each todo as note (todo.indexOf(note))}
         {#if note.type == "note"}
             <li
