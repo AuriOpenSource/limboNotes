@@ -28,6 +28,7 @@
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
-    "daisyui": "^2.13.6"
+    "daisyui": "^2.13.6",
+    "motion": "^10.7.0"
   }
 }

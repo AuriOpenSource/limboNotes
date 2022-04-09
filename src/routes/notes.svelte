@@ -1,6 +1,6 @@
 <script lang="ts">
     import Button from "$lib/button/button.svelte";
-    import Card from "../lib/card/card.svelte";
+    import Cards from "$lib/cards/cards.svelte";
 
     // let user: Record<string, string | boolean> = {login: false}
     let todo: Record<string, string | string[] | Record<string, any>>[] = [
@@ -17,96 +17,6 @@
             type: "array",
         },
         {
-            name: "Lembrete",
-            content: "Encerra o período de insenção do enem",
-            date: "15/04",
-            type: "note",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
-            name: "Deveres",
-            content: ["Arrumar a casa", "Cuidar dos animais", "Fazer o Almoço"],
-            date: "15/04",
-            type: "array",
-        },
-        {
             name: "Deveres",
             content: [
                 { done: true, text: "finish Svelte tutorial" },
@@ -119,8 +29,7 @@
     ];
 
     function log(v) {
-        alert("cliquei");
-        console.log(v);
+        console.log(typeof v == 'object' ? todo[v.detail.id].type : v);
     }
 </script>
 
@@ -128,7 +37,7 @@
     <title>notes</title>
 </svelte:head>
 
-<section id="section" class="overflow-auto">
-    <Card {todo} />
+<section>
+    <Cards {todo} on:myevent={log} />
     <Button on:click={log} />
 </section>

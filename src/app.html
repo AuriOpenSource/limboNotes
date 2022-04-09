@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="text-2xl bg-base-300 transition-all md:text-xl" style="font-size: 16px;">
+<html lang="en" class="bg-base-300 transition-all" style="font-size: 16px;">
 	<head>
+		<script>
+			console.log(window)
+		</script>
 		<meta charset="utf-8" />
 		<meta name="description" content="Svelte demo app" />
 		<link rel="icon" href="%svelte.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%svelte.head%
 	</head>
-	<body class="">
+	<body class="text-xl md:text-xs">
 		<div>%svelte.body%</div>
 	</body>
 </html>
