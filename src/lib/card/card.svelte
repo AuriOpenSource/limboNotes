@@ -1,38 +1,19 @@
 <script lang="ts">
+    import List from "./list.svelte";
+    import Note from "./note.svelte";
+    import Todo from "./todo.svelte";
+
     export let todo: Record<string, string | string[]>[];
 </script>
 
 <ul class="grid p-2 md:grid-cols-2 lg:grid-cols-4">
-    {#each todo as note (todo.indexOf(note))}
+    {#each todo as note, id (note)}
         {#if note.type == "note"}
-            <li
-                class="border-l-4 m-2 p-3 border-secondary bg-base-100 shadow-md transition-all duration-200 cursor-pointer hover:-translate-y-1 hover:bg-base-200"
-                id={todo.indexOf(note)}
-            >
-                <span class="text-lg">{note.name}</span>
-                <p class="text-2xs">Generated in {note.date}</p>
-                <p class="text-sm">{note.content.slice(0, 25) + "..."}</p>
-            </li>
+            <Note {id} {...note} />
         {:else if note.type == "array"}
-            <li
-                class="border-l-4 m-2 p-3 border-secondary bg-base-100 max-h-34 shadow-md hover:bg-base-200 transition-all duration-200 cursor-pointer hover:-translate-y-1"
-                id={todo.indexOf(note)}
-            >
-                <span class="text-lg">{note.name}</span>
-                <p class="text-2xs">Generated in {note.date}</p>
-                <ol class="ml-3 text-primary" style="list-style-type: disc;">
-                    {#each note.content.slice(0, 2) as item}
-                        <li class="text-sm">
-                            <span class="text-base-content">
-                                {item.slice(0, 25)}
-                            </span>
-                        </li>
-                    {/each}
-                    <li class="text-sm">
-                        <span class="text-base-content">...</span>
-                    </li>
-                </ol>
-            </li>
+            <List {id} {...note} />
+        {:else if note.type == "todo"}
+            <Todo {id} {...note} />
         {/if}
     {/each}
 </ul>

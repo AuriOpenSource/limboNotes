@@ -9,6 +9,8 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const response = await resolve(event);
 
 	if (!cookies.userid) {
+		console.log(cookies);
+		
 		// if this is the first time the user has visited this app,
 		// set a cookie so that we recognise them when they return
 		response.headers.set(
