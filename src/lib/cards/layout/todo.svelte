@@ -29,8 +29,9 @@
                 <span class="text-secondary mx-2" class:risk={todo.done}>{todo.text}</span>
             </li>
         {/each}
-        <li class="text-sm">
-            <span class="text-base-content">...</span>
+        <li class="text-sm flex place-items-center">
+            <input type="checkbox" class="checkbox checkbox-xs checkbox-primary" disabled/>
+            <span class="text-base-content mx-2">...</span>
         </li>
     </ul>
 </li>

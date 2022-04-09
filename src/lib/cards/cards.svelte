@@ -9,14 +9,14 @@
 
     onMount(() => {
         animate(
-            '#card',
+            'li',
             {
                 opacity: [0,1],
                 x: [-20, 0]
             },
             {
-                duration: 1,
-                delay: stagger(.3)
+                duration: .5,
+                delay: stagger(.1)
             }
         )
     })
