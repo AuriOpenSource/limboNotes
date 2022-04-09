@@ -3,7 +3,7 @@
     "short_name": "l_notes",
     "lang": "pt-BR",
     "id": "notes",
-    "start_url": ".",
+    "start_url": "/?homescreen=1",
     "scope": "/",
     "background_color": "#0008ff",
     "theme_color": "#0008ff",
