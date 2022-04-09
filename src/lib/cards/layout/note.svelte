@@ -11,7 +11,7 @@
 </script>
 
 <li
-    id="card"
+    {id}
     class="border-l-4 m-2 p-3 border-secondary bg-base-100 shadow-md transition-all duration-200 cursor-pointer z-10 hover:-translate-y-1 hover:bg-base-200"
     on:click={() => dispatch('myevent', {id})}
 >

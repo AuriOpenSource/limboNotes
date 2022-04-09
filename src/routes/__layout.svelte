@@ -9,7 +9,7 @@
 	<Header />
 {/if}
 
-<main class="relative top-14 overflow-auto">
+<main class={user.login ? "relative top-14" : ''}>
 	<slot />
 </main>
 

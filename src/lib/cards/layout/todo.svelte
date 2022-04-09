@@ -11,9 +11,9 @@
 </script>
 
 <li
-    id="card"
-    class="border-l-4 m-2 p-3 border-secondary bg-base-100 max-h-34 shadow-md z-10 hover:bg-base-200 transition-all duration-200 cursor-pointer hover:-translate-y-1"
-    on:click={() => dispatch('myevent', {id})}
+    {id}
+    class="border-l-4 m-2 p-3 border-secondary bg-base-100 max-h-34 shadow-md z-10 hover:bg-base-200 transition-all duration-200 cursor-pointer"
+    on:click|self={() => dispatch('myevent', {id})}
 >
     <span class="text-lg">{name}</span>
     <p class="text-2xs">Generated in {date}</p>

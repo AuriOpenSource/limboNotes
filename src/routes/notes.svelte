@@ -29,7 +29,7 @@
     ];
 
     function log(v) {
-        console.log(typeof v == 'object' ? todo[v.detail.id].type : v);
+        console.log(v);
     }
 </script>
 
@@ -38,6 +38,6 @@
 </svelte:head>
 
 <section>
-    <Cards {todo} on:myevent={log} />
+    <Cards {todo} on:myevent={log}/>
     <Button on:click={log} />
 </section>

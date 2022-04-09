@@ -5,7 +5,7 @@
     import Note from "./layout/note.svelte";
     import Todo from "./layout/todo.svelte";
 
-    export let todo: Record<string, string | string[]>[];
+    export let todo: any;
 
     onMount(() => {
         animate(
