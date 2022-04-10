@@ -1,7 +1,7 @@
 {
     "short_name": "svelte-pwa",
     "name": "svelte-test-pwa",
-    "start_url": "/",
+    "start_url": "/?homescreen=1",
     "icons": [
       {
         "src": "icons/favicon.png",
