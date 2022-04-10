@@ -9,7 +9,7 @@
 
     onMount(() => {
         animate(
-            'li',
+            '#li',
             {
                 opacity: [0,1],
                 x: [-20, 0]

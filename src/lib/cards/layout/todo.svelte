@@ -11,7 +11,7 @@
 </script>
 
 <li
-    {id}
+    id="li"
     class="border-l-4 m-2 p-3 border-secondary bg-base-100 max-h-34 shadow-md z-10 hover:bg-base-200 transition-all duration-200 cursor-pointer"
     on:click|self={() => dispatch('myevent', {id})}
 >
@@ -19,7 +19,7 @@
     <p class="text-2xs">Generated in {date}</p>
     <ul class="ml-3 text-primary">
         {#each content.slice(0, 2) as todo, idx}
-            <li class:done={todo.done} id="{idx}" class="text-sm flex place-items-center my-2">
+            <li id="li" class:done={todo.done} class="text-sm flex place-items-center my-2">
                 <input 
                     type="checkbox"
                     class="checkbox checkbox-xs checkbox-primary"
@@ -29,7 +29,7 @@
                 <span class="text-secondary mx-2" class:risk={todo.done}>{todo.text}</span>
             </li>
         {/each}
-        <li class="text-sm flex place-items-center">
+        <li id="li" class="text-sm flex place-items-center">
             <input type="checkbox" class="checkbox checkbox-xs checkbox-primary" disabled/>
             <span class="text-base-content mx-2">...</span>
         </li>
