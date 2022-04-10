@@ -8,7 +8,7 @@
     export let todo: any;
 
     onMount(() => {
-        animate(
+        const animation = animate(
             '#li',
             {
                 opacity: [0,1],
@@ -16,7 +16,7 @@
             },
             {
                 duration: .5,
-                delay: stagger(.1)
+                delay: stagger(.05, { opacity: [0,1] }, { easing: "ease-out" })
             }
         )
     })

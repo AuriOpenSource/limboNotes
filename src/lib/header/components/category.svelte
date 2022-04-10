@@ -2,8 +2,8 @@
     import { onMount } from "svelte";
 
     const links = [
-        ["/notes", "notes", false],
         ["/", "home", false],
+        ["/notes", "notes", false],
     ];
 
     onMount(() => {
