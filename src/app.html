@@ -2,19 +2,8 @@
 <html lang="en" class="bg-base-300 transition-all" style="font-size: 16px;">
 
 <head>
-	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('sw.js')
-				.then( (registration) => {
-					console.log('Registration sucessful, scope is:', registration.scope);
-				})
-				.catch((error) => {
-					console.error('Service worker registration failed, error:', error);
-				})
-			}
-	</script>
-	<link rel="manifest" href="%svelte.assets%/manifest.json">
 	<meta charset="utf-8" />
+	<link rel="manifest" crossorigin="use-credentials" href="manifest.json">
 	<meta name="description" content="Svelte demo app" />
 	<link rel="icon" href="%svelte.assets%/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
