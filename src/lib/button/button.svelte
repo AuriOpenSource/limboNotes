@@ -20,7 +20,7 @@
         transform: rotate(360deg);
     }
 
-    button::after {
-        transform: rotate(180deg);
+    button:active {
+        transform: rotate(360deg);
     }
 </style>
