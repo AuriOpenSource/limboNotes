@@ -2,20 +2,15 @@
 <html lang="en" class="bg-base-300 transition-all" style="font-size: 16px;">
 
 <head>
-	<script>
-		if ("serviceWorker" in navigator) {
-			navigator.serviceWorker.register("sw.js");
-		}
-	</script>
 	<meta charset="utf-8" />
 	<link rel="manifest" crossorigin="use-credentials" href="manifest.json">
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Limbo Notes - the best notes app you'll ever see" />
 	<link rel="icon" href="%svelte.assets%/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	%svelte.head%
 </head>
 
-<body class="text-xl md:text-base">
+<body>
 	<div>%svelte.body%</div>
 </body>
 
