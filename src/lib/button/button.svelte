@@ -1,5 +1,5 @@
 <button
-  class="btn p-2 btn-md btn-primary duration-1000 btn-circle fixed bottom-5 right-5 z-20"
+  class="btn btn-primary btn-circle btn-md fixed bottom-5 right-5 z-20 p-2 duration-1000"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"

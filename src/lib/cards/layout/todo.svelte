@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="card border-l-4 border-secondary shadow-md bg-base-100 hover:bg-base-200 hover:-translate-y-1 duration-200 cursor-pointer"
+  class="card cursor-pointer border-l-4 border-secondary bg-base-100 shadow-md duration-200 hover:-translate-y-1 hover:bg-base-200"
 >
   <div class="card-body">
     <h3 class="card-title">{note.name}</h3>
@@ -15,26 +15,26 @@
         <li
           id="li"
           class:done={todo.done}
-          class="text-sm flex place-items-center my-2"
+          class="my-2 flex place-items-center text-sm"
         >
           <input
             type="checkbox"
-            class="checkbox checkbox-xs checkbox-primary"
+            class="checkbox checkbox-primary checkbox-xs"
             bind:checked={todo.done}
             disabled
           />
-          <span class="text-secondary mx-2" class:risk={todo.done}
+          <span class="mx-2 text-secondary" class:risk={todo.done}
             >{todo.text}</span
           >
         </li>
       {/each}
-      <li id="li" class="text-sm flex place-items-center">
+      <li id="li" class="flex place-items-center text-sm">
         <input
           type="checkbox"
-          class="checkbox checkbox-xs checkbox-primary"
+          class="checkbox checkbox-primary checkbox-xs"
           disabled
         />
-        <span class="text-base-content mx-2">...</span>
+        <span class="mx-2 text-base-content">...</span>
       </li>
     </ul>
   </div>

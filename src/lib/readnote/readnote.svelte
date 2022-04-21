@@ -7,7 +7,7 @@
 <input type="checkbox" id={note.id} class="modal-toggle" />
 <div class="modal">
   <div class="modal-box relative">
-    <label for={note.id} class="btn btn-sm btn-circle absolute right-2 top-2">
+    <label for={note.id} class="btn btn-circle btn-sm absolute right-2 top-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5"

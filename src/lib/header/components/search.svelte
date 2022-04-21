@@ -4,9 +4,18 @@
   let show: boolean = false;
 </script>
 
-<button 
-    on:click={() => (show === true ? (show = false) : (show = true))}
-    class="btn btn-ghost"
+{#if show}
+  <input
+    type="text"
+    placeholder="Search..."
+    class="input input-primary mr-3"
+    value={input}
+  />
+{/if}
+
+<button
+  on:click={() => (show === true ? (show = false) : (show = true))}
+  class="btn btn-ghost"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -21,12 +30,3 @@
     />
   </svg>
 </button>
-
-{#if show}
-  <input
-    type="text"
-    placeholder="Search..."
-    class="input input-primary ml-3"
-    value={input}
-  />
-{/if}

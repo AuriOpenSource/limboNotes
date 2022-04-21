@@ -24,7 +24,7 @@
   });
 </script>
 
-<ul class="grid p-4 gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+<ul class="grid grid-cols-1 gap-3 p-4 md:grid-cols-2 lg:grid-cols-4">
   {#each todos as note (note.id)}
     <li>
       {#if note.type === "note"}
@@ -43,9 +43,9 @@
     </li>
 
     <Readnote {note}>
-      <svelte:fragment slot="note"/>
-      <svelte:fragment slot="array"/>
-      <svelte:fragment slot="todo"/>
+      <svelte:fragment slot="note" />
+      <svelte:fragment slot="array" />
+      <svelte:fragment slot="todo" />
     </Readnote>
   {/each}
 </ul>

@@ -23,7 +23,7 @@ const imgFilter = files.filter((val) => {
 clientsClaim();
 
 pageCache({
-  cacheName: cacheNames.prefix + 'pages' + cacheNames.suffix
+  cacheName: cacheNames.prefix + "pages" + cacheNames.suffix,
 });
 
 setCacheNameDetails({

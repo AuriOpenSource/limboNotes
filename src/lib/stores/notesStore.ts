@@ -1,22 +1,22 @@
 import { writable } from "svelte-local-storage-store";
 
-type NoteType = 'note' | 'array' | 'todo';
+type NoteType = "note" | "array" | "todo";
 
 type ContentType = string | string[] | TodoType[];
 
 interface TodoType {
-    done: boolean;
-    text: string;
+  done: boolean;
+  text: string;
 }
 
 export interface BaseDef {
-    name: string;
-    content: ContentType;
-    date: string;
-    type: NoteType;
-    id: string;
+  name: string;
+  content: ContentType;
+  date: string;
+  type: NoteType;
+  id: string;
 }
 
-let todos = writable<BaseDef[]>('notes',[]);
+let todos = writable<BaseDef[]>("notes", []);
 
 export { todos };

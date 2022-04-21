@@ -1,11 +1,11 @@
 module.exports = {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
-    extend: {}
+    extend: {},
   },
-  mode: 'jit',
-  plugins: [require('daisyui')],
+  mode: "jit",
+  plugins: [require("daisyui")],
   daisyui: {
-    themes: ['dark', 'light'],
-  }
+    themes: ["dark", "light"],
+  },
 };

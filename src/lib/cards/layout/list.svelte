@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="card border-l-4 border-secondary shadow-md bg-base-100 hover:bg-base-200 hover:-translate-y-1 duration-200 cursor-pointer"
+  class="card cursor-pointer border-l-4 border-secondary bg-base-100 shadow-md duration-200 hover:-translate-y-1 hover:bg-base-200"
 >
   <div class="card-body">
     <h3 class="card-title">{note.name}</h3>

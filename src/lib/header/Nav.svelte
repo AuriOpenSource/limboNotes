@@ -1,11 +1,9 @@
 <script lang="ts">
   import Search from "$lib/header/components/search.svelte";
-  import Category from "$lib/header/components/category.svelte";
 </script>
 
 <nav class="navbar shadow-md">
   <div class="flex-1">
-    <Category />
     <a href="/new-note" class="btn btn-ghost space-x-3">
       <span>Add note</span>
       <span>
