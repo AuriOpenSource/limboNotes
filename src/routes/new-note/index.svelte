@@ -45,7 +45,7 @@
 
 		<div class="card w-1/2 flex-shrink-0 bg-base-200 shadow-2xl">
 			<div class="card-body">
-				<input type="text" bind:value={title} />
+				<input type="text" class="input input-bordered" bind:value={title} />
 				<Editor {value} {plugins} on:change={handleChange} />
 
 				<div class="form-control mt-6">
