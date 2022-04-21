@@ -1,32 +1,26 @@
 <script lang="ts">
-    import { createEventDispatcher } from "svelte";
-    let name: string;
-    let date: string;
-    let content: string[];
-    let id: string;
+  import type { BaseDef } from "$lib/stores/notesStore";
 
-    export {name, date, content, id}
-
-    const dispatch = createEventDispatcher();
+  export let note: BaseDef;
 </script>
 
-<li 
-    id="li"
-    class="border-l-4 m-2 p-3 border-secondary bg-base-100 max-h-34 shadow-md z-10 hover:bg-base-200 transition-all duration-200 cursor-pointer"
-    on:click={() => dispatch('myevent', {id})}
+<div
+  class="card border-l-4 border-secondary shadow-md bg-base-100 hover:bg-base-200 hover:-translate-y-1 duration-200 cursor-pointer"
 >
-    <span class="text-lg">{name}</span>
-    <p class="text-2xs">Generated in {date}</p>
+  <div class="card-body">
+    <h3 class="card-title">{note.name}</h3>
+    <p class="text-2xs">Generated in {note.date}</p>
     <ol class="ml-3 text-primary" style="list-style-type: disc;">
-        {#each content.slice(0, 2) as item}
-            <li id="li" class="text-sm">
-                <span class="text-base-content">
-                    {item.slice(0, 25)}
-                </span>
-            </li>
-        {/each}
+      {#each note.content.slice(0, 2) as item}
         <li class="text-sm">
-            <span class="text-base-content">...</span>
+          <span class="text-base-content">
+            {item.slice(0, 25)}
+          </span>
         </li>
+      {/each}
+      <li class="text-sm">
+        <span class="text-base-content">...</span>
+      </li>
     </ol>
-</li>
+  </div>
+</div>

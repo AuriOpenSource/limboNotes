@@ -1,42 +1,51 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import {animate, stagger} from 'motion'
-    import List from "./layout/list.svelte";
-    import Note from "./layout/note.svelte";
-    import Todo from "./layout/todo.svelte";
+  import { onMount } from "svelte";
+  import { animate, stagger } from "motion";
+  import List from "./layout/list.svelte";
+  import Note from "./layout/note.svelte";
+  import Todo from "./layout/todo.svelte";
+  import type { BaseDef } from "$lib/stores/notesStore";
+  import Readnote from "$lib/readnote/readnote.svelte";
 
-    export let todo: any;
+  export let todos: BaseDef[];
 
-    onMount(() => {
-        const animation = animate(
-            '#li',
-            {
-                opacity: [0,1],
-                x: [-20, 0]
-            },
-            {
-                duration: .5,
-                delay: stagger(.05, { opacity: [0,1] }, { easing: "ease-out" })
-            }
-        )
-    })
+  onMount(() => {
+    const animation = animate(
+      "#li",
+      {
+        opacity: [0, 1],
+        x: [-20, 0],
+      },
+      {
+        duration: 0.5,
+        delay: stagger(0.05, { opacity: [0, 1] }, { easing: "ease-out" }),
+      }
+    );
+  });
 </script>
 
-<ul class="grid p-2 md:grid-cols-2 lg:grid-cols-4">
-    {#each todo as note, id (note)}
-        {#if note.type == "note"}
-            <Note {id} {...note} on:myevent/>
-        {:else if note.type == "array"}
-            <List {id} {...note} on:myevent/>
-        {:else if note.type == "todo"}
-            <Todo {id} {...note} on:myevent/>
-        {/if}
-    {/each}
-</ul>
+<ul class="grid p-4 gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+  {#each todos as note (note.id)}
+    <li>
+      {#if note.type === "note"}
+        <label for={note.id}>
+          <Note {note} />
+        </label>
+      {:else if note.type === "array"}
+        <label for={note.id}>
+          <List {note} />
+        </label>
+      {:else if note.type === "todo"}
+        <label for={note.id}>
+          <Todo {note} />
+        </label>
+      {/if}
+    </li>
 
-<style>
-    p {
-        padding: 0;
-        margin: 0;
-    }
-</style>
+    <Readnote {note}>
+      <svelte:fragment slot="note"/>
+      <svelte:fragment slot="array"/>
+      <svelte:fragment slot="todo"/>
+    </Readnote>
+  {/each}
+</ul>

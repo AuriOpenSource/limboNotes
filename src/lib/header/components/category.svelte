@@ -13,8 +13,6 @@
     });
 
     function underline() {
-        console.log(this.textContent);
-
         const { index } = this.dataset;
 
         links.forEach((e, i) => {
@@ -24,14 +22,14 @@
     }
 </script>
 
-<div class="flex">
+<div class="inline-flex">
     {#each links as [path, name, activate], id}
         <a
             href={path}
             data-index={id}
             on:click={underline}
             class:a={activate}
-            class="flex place-items-center px-2 border-secondary max-h-min"
+            class="btn btn-ghost"
         >
             {name}
         </a>

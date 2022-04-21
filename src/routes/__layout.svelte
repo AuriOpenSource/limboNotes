@@ -1,20 +1,20 @@
 <script lang="ts">
-	import Header from "$lib/header/Header.svelte";
+	import Nav from '$lib/header/Nav.svelte'
 	import "../app.css";
 
 	let user: Record<string, string | boolean> = {login: true}
 </script>
 
-{#if user.login}
-	<Header />
-{/if}
+<header>
+	{#if user.login}
+		<Nav/>	
+	{/if}
+</header>
 
-<main class={user.login ? "relative top-14" : ''}>
+<svelte:head>
+	<title>Limbo</title>
+</svelte:head>
+
+<main class='grid place-items-center'>
 	<slot />
 </main>
-
-<style>
-	main {
-		height: 90vh;
-	}
-</style>

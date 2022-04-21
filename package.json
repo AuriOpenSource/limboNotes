@@ -2,7 +2,7 @@
   "name": "svelte-ts-limbo",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "svelte-kit dev --host",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
@@ -11,7 +11,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
     "@types/cookie": "^0.4.1",
     "autoprefixer": "^10.4.4",
@@ -33,6 +33,7 @@
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
     "cookie": "^0.4.1",
-    "motion": "^10.7.0"
+    "motion": "^10.7.0",
+    "svelte-local-storage-store": "^0.2.6"
   }
 }

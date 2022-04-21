@@ -1,21 +1,16 @@
 <script lang="ts">
-    import { createEventDispatcher } from "svelte";
-    let name: string;
-    let date: string;
-    let content: string;
-    let id: string;
+import type { BaseDef } from "$lib/stores/notesStore";
 
-    export {name, date, content, id}
 
-    const dispatch = createEventDispatcher();
+  export let note: BaseDef;
 </script>
 
-<li
-    id="li"
-    class="border-l-4 m-2 p-3 border-secondary bg-base-100 shadow-md transition-all duration-200 cursor-pointer z-10 hover:-translate-y-1 hover:bg-base-200"
-    on:click={() => dispatch('myevent', {id})}
+<div
+  class="card shadow-md border-l-4 border-secondary bg-base-100  duration-200 cursor-pointer hover:-translate-y-1 hover:bg-base-200"
 >
-    <span class="text-lg">{name}</span>
-    <p class="text-2xs">Generated in {date}</p>
-    <p class="text-sm">{content.slice(0, 25) + "..."}</p>
-</li>
+  <div class="card-body">
+    <h3 class="card-title">{note.name}</h3>
+    <p class="text-2xs">Generated in {note.date}</p>
+    <p class="text-sm">{note.content.slice(0, 25) + "..."}</p>
+  </div>
+</div>
