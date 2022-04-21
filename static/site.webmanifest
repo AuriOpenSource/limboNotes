@@ -48,18 +48,18 @@
 	"orientation": "any",
 	"dir": "ltr",
 	"categories": ["notes", "notepad", "todo", "anotation", "education"],
-    "shortcuts": [
-        {
-            "name": "Add note",
-            "url": "/new-note",
-            "icons": [
-                {
-                    "src": "/plus.png",
-                    "sizes": "96x96",
-                    "type": "image/png"
-                }
-            ]
-        }
-    ],
+	"shortcuts": [
+		{
+			"name": "Add note",
+			"url": "/new-note",
+			"icons": [
+				{
+					"src": "/plus.png",
+					"sizes": "96x96",
+					"type": "image/png"
+				}
+			]
+		}
+	],
 	"display": "standalone"
 }
